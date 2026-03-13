@@ -36,6 +36,7 @@ COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 
 # Copy prisma schema (needed for db push at startup)
 COPY prisma ./prisma
+COPY prisma.config.ts ./
 
 EXPOSE 5000
 
