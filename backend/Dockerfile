@@ -14,6 +14,7 @@ COPY tsconfig.json ./
 COPY src ./src
 
 # Generate Prisma client (DATABASE_URL only needed at runtime, not here)
+ENV DATABASE_URL="postgresql://dummy:dummy@localhost:5432/dummy"
 RUN npx prisma generate
 
 # Compile TypeScript
