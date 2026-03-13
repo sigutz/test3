@@ -23,7 +23,7 @@ jobs:
           script: |
             set -e
 
-            if [ ! -d "~/test3" ]; then
+            if [ ! -d "$HOME/test3" ]; then
               echo "── Repository not found. Cloning... ──"
               git clone https://github.com/${{ github.repository }}.git ~/test3
               cd ~/test3
