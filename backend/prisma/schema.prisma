@@ -19,3 +19,11 @@ model Silviu {
   age   Int?
   address String?
 }
+
+model ioana {
+  id    Int     @id @default(autoincrement())
+  name  String?
+  email String  @unique
+  age   Int?
+  address String?
+}
